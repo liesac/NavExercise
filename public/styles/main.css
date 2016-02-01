@@ -1,0 +1,294 @@
+@import "fonts.css";
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #ec008c;
+    font-family: 'HUGEAvantGardeBold';
+}
+
+nav > ul > li > a {
+    font-size: 21px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        overflow: hidden; 
+        transition: width 2s;
+    }
+    .blocker {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        bottom: 0;
+        height: calc(100% - 60px);
+        width: 0;
+        background-color: rgba(0, 0, 0, 0);
+        transition: left 2s, width 2s, background-color 2s;
+    }
+    section {
+        min-width: 400px
+    }
+    section > h1 {
+        position: relative;
+        font-family: HUGEAvantGardeBold;
+        font-size: 44px;
+        color: black;
+        background-color: white;
+        margin: 50px 24px;
+    }
+    section:first-child {
+        background-image: url(../images/background-image.jpg);
+        background-size: cover;
+        padding: 0;
+        margin: 0;
+        height: 240px;
+    }
+    section p {
+        font-size: 14px;
+        font-family: 'GalaxieCopernicusBook';
+        text-align: justify;
+        margin: auto 24px;
+    }
+    nav {
+        width: 100%;
+        height: 60px;
+        overflow: hidden
+    }
+    nav p {
+        position: absolute;
+        bottom: 0;
+        font-family: helvetica;
+        font-size: 16px;
+        left: 24px;
+        display: none;
+    }
+    nav a {
+        color: black;
+    }
+    nav img[alt="hugeLogo"] {
+        position: relative;
+        height: 33.333%;
+        top: 20px;
+        left: 24px;
+        display: none;
+    }
+    nav img[alt="hamburger"] {
+        position: absolute;
+        left: 0;
+        height: 60px;
+        cursor: pointer;
+    }
+    nav img[alt="close"] {
+        position: fixed;
+        top: -4px;
+        right: 0;
+        cursor: pointer;
+        display: none;
+    }
+    nav > ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 0;
+        position: relative;
+        float: left;
+        height: 100%;
+        background-color: white;
+        top: 60px;
+        left: -80%;
+        transition: left 2s, width 2s;
+    }
+    nav > ul > li {
+        padding: 10px 24px 11px 24px;
+    }
+    nav > ul > li > ul {
+        list-style: none;
+        padding: 0;
+        display: none
+    }
+    nav > ul > li > ul > li {
+        margin: 0 -24px;
+        padding: 13px 24px;
+    }
+    nav > ul > li > ul > li > a {
+        font-family: 'Galaxie';
+        font-size: 16px;
+    }
+    nav > ul > li > ul > li:hover > a {
+        color: #ec008c;
+    }
+    nav > ul > li > ul > li:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    .backgroundGray:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    .chevron::before {
+        position: relative;
+        float: right;
+        margin: 0 5px 0 0;
+        border-style: solid;
+        border-width: 5px 5px 0 0;
+        border-color: #ec008c;
+        content: '';
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        transform: rotate(-45deg);
+    }
+    .chevron.bottom:before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    .containerAfter {
+        width: 0;
+        transition: width 2s;
+    }
+    .container.containerAfter {
+        width: 100%;
+    }
+    .menuActiveContainer .blocker {
+        left: 80%;
+        width: 20%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .menuActive {
+        overflow: visible;
+    }
+    .menuActive > ul {
+        left: 0;
+        width: 80%;
+    }
+    .menuActive p {
+        display: block;
+    }
+    .menuActive img[alt="hugeLogo"] {
+        display: block;
+    }
+    .menuActive img[alt="hamburger"] {
+        display: none;
+    }
+    .menuActive img[alt="close"] {
+        display: block;
+    }
+    .menuActiveSubSection ul {
+        display: block;
+    }
+    .menuActiveSubSection:hover {
+        background-color: transparent;
+    }
+    .menuActiveSubSection .chevron::before {
+        transform: rotate(-45deg);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    section > h1 {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        margin: 0;
+        font-family: HUGEAvantGardeBold;
+        font-size: 120px;
+        text-align: center;
+        color: white;
+        max-height: 630px;
+        min-width: 490px;
+    }
+    section:first-child {
+        background-image: url(../images/background-image.jpg);
+        background-size: cover;
+        padding: 0;
+        margin: 0;
+        height: 640px;
+    }
+    section {
+        padding: 60px 0;
+        background-color: white;
+        min-width: 1000px;
+    }
+    section p {
+        width: 968px;
+        font-size: 24px;
+        font-family: 'GalaxieCopernicusBook';
+        text-align: justify;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav {
+        height: 72px;
+        min-width: 1000px
+    }
+    nav img[alt="hugeLogo"] {
+        margin: 24px 48px 24px 24px;
+        height: 24px;
+        float: left;
+        cursor: pointer;
+    }
+    nav img[alt="hamburger"] {
+        display: none;
+    }
+    nav img[alt="close"] {
+        display: none;
+    }
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    nav li {
+        float: left;
+    }
+    nav a {
+        color: white;
+        display: block;
+        font-size: 21px;
+        font-family: 'HUGEAvantGardeBold';
+        height: 24px;
+        text-align: center;
+        padding: 24px;
+    }
+    nav li:hover > a {
+        background: white;
+        color: #ec008c;
+    }
+    nav ul ul {
+        opacity: 0;
+        position: absolute;
+        visibility: hidden;
+    }
+    nav ul li:hover ul {
+        opacity: 1;
+        visibility: visible;
+        z-index: 999;
+    }
+    nav ul ul li {
+        background: white;
+        float: none;
+    }
+    nav ul ul li a {
+        color: black;
+        font-size: 16px;
+        font-family: 'GalaxieCopernicusBook';
+        padding: 0 0 0 15px;
+        text-align: left;
+        padding: 12px 24px;
+    }
+    nav ul ul li a:hover {
+        background: #eee;
+        color: #ec008c;
+    }
+    nav p {
+        display: none
+    }
+}
